@@ -20,7 +20,7 @@ public class SetActiveOnContact : MonoBehaviour
         {
             Debug.Log("Jestem w ifie");
             Debug.Log(other.gameObject.name);
-            gameObject.SetActive(false);
+            OwnObjectManager.Instance.FullWall.SetActive(false);
             OwnObjectManager.Instance.LeftWall.SetActive(true);
             OwnObjectManager.Instance.RightWall.SetActive(true);
         }
