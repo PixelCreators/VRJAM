@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fire
   - Enemy
+  - Boundary
+  - Bonus
   layers:
   - Default
   - TransparentFX
