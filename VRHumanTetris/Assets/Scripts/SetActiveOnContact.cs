@@ -28,7 +28,7 @@ public class SetActiveOnContact : MonoBehaviour
     }
     public IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1f);
         OwnObjectManager.Instance.FullWall.SetActive(false);
         OwnObjectManager.Instance.LeftWall.SetActive(true);
         OwnObjectManager.Instance.RightWall.SetActive(true);
