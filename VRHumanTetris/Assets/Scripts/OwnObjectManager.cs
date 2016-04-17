@@ -15,7 +15,6 @@ public class OwnObjectManager : MonoBehaviour
 	
 	void Update ()
 	{
-	    Debug.Log(LeftWall.active);
 	}
 
     void Awake()
