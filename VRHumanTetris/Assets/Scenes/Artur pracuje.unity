@@ -4705,6 +4705,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 11487208, guid: 8407498cc952f3b45beae017fd3f3e85, type: 2}
+      propertyPath: WaterLevel
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8407498cc952f3b45beae017fd3f3e85, type: 2}
   m_IsPrefabParent: 0
