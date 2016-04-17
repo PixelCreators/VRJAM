@@ -8,6 +8,6 @@ public class AccordingToCameraPosition : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(cameraPosition.position.x + offset.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(cameraPosition.position.x + offset.x, transform.position.y, cameraPosition.position.z + offset.z);
     }
 }

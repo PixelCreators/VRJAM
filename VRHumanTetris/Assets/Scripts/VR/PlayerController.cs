@@ -15,5 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.A))
             InputTracking.Recenter();
+        
     }
 }
