@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Mover : MonoBehaviour
 {
 
-    public float speed;
+    public float Speed;
 
-    private Transform player;
-    private Rigidbody rb;
+    //private Transform _player;
+    private Rigidbody _rb;
 
-    void Start()
+    public void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.up * speed;
+        _rb = GetComponent<Rigidbody>();
+        _rb.velocity = transform.up * Speed;
     }
 }
