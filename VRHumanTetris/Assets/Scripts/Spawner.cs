@@ -28,7 +28,10 @@ public class Spawner : MonoBehaviour {
                 GameObject hazard = hazards[Random.Range(0, hazards.Length)];
 
                 Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                Quaternion spawnRotation = Quaternion.identity;
+                Quaternion spawnRotation = Quaternion.Euler(
+                    Quaternion.identity.eulerAngles.x - 90,
+                    Quaternion.identity.eulerAngles.y,
+                    Quaternion.identity.eulerAngles.z);
                 Instantiate(hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
