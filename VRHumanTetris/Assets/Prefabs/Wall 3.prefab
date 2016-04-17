@@ -69,6 +69,7 @@ GameObject:
   - 4: {fileID: 495342}
   - 114: {fileID: 11495610}
   - 114: {fileID: 11401342}
+  - 114: {fileID: 11471076}
   m_Layer: 0
   m_Name: Wall 3
   m_TagString: Enemy
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682ba9c433e15364fb1bbe9d6c74cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  Speed: 0
 --- !u!114 &11421388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682ba9c433e15364fb1bbe9d6c74cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  Speed: 0
 --- !u!114 &11435714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,6 +341,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 874fe4f6467f7294eb120a789c43cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11471076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a757d0c51d34345a8e3bd94c4fc100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11495610
@@ -353,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565cc408382289c4caec5f1f2cdbeaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallindex: 0
+  Wallindex: 0
   Wall: {fileID: 199764}
   WallFull: {fileID: 154384}
   WallLeft: {fileID: 174164}
