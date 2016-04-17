@@ -10,10 +10,10 @@ public class AddWalls : MonoBehaviour
 
     public void Start ()
     {
-        Wallindex = OwnObjectManager.Instance.AddToList(Wall, WallFull, WallLeft, WallRight);
-        OwnObjectManager.Instance.Walls[Wallindex][0].SetActive(true);
-        OwnObjectManager.Instance.Walls[Wallindex][1].SetActive(true);
-        OwnObjectManager.Instance.Walls[Wallindex][2].SetActive(false);
-        OwnObjectManager.Instance.Walls[Wallindex][3].SetActive(false);
+            Wallindex = OwnObjectManager.Instance.AddToList(Wall, WallFull, WallLeft, WallRight);
+            OwnObjectManager.Instance.Walls[Wallindex][0].SetActive(true);
+            OwnObjectManager.Instance.Walls[Wallindex][1].SetActive(true);
+            OwnObjectManager.Instance.Walls[Wallindex][2].SetActive(false);
+            OwnObjectManager.Instance.Walls[Wallindex][3].SetActive(false);
     }
 }

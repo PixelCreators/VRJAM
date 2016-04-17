@@ -25,15 +25,31 @@ public class Spawner : MonoBehaviour {
         {
             for (int i = 0; i < HazardCount; i++)
             {
-                GameObject hazard = Hazards[Random.Range(0, Hazards.Length)];
+                if (i == 8)
+                {
+                    Debug.Log("hehe");
+                    GameObject hazard = Hazards[5];
 
-                Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                Quaternion spawnRotation = Quaternion.Euler(
-                    Quaternion.identity.eulerAngles.x - 90,
-                    Quaternion.identity.eulerAngles.y,
-                    Quaternion.identity.eulerAngles.z);
-                Instantiate(hazard, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(SpawnWait);
+                    Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    Quaternion spawnRotation = Quaternion.Euler(
+                        Quaternion.identity.eulerAngles.x - 90,
+                        Quaternion.identity.eulerAngles.y,
+                        Quaternion.identity.eulerAngles.z);
+                    Instantiate(hazard, spawnPosition, spawnRotation);
+                    yield return new WaitForSeconds(SpawnWait);
+                }
+                else
+                {
+                    GameObject hazard = Hazards[Random.Range(0, Hazards.Length-1)];
+
+                    Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    Quaternion spawnRotation = Quaternion.Euler(
+                        Quaternion.identity.eulerAngles.x - 90,
+                        Quaternion.identity.eulerAngles.y,
+                        Quaternion.identity.eulerAngles.z);
+                    Instantiate(hazard, spawnPosition, spawnRotation);
+                    yield return new WaitForSeconds(SpawnWait);
+                }
             }
             yield return new WaitForSeconds(WaveWait);
 
