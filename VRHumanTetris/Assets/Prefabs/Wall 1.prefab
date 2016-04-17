@@ -11,6 +11,8 @@ GameObject:
   - 114: {fileID: 11439252}
   - 114: {fileID: 11447030}
   - 114: {fileID: 11494910}
+  - 65: {fileID: 6525732}
+  - 114: {fileID: 11450452}
   m_Layer: 0
   m_Name: Wall 1
   m_TagString: Enemy
@@ -272,6 +274,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300144, guid: 9d843318587ddb14e97a2c2f368d0132, type: 3}
+--- !u!65 &6525732
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.94, y: 0.19, z: 2.3}
+  m_Center: {x: 0, y: -0.64, z: 1.33}
 --- !u!65 &6539316
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -347,6 +361,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
+--- !u!114 &11450452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c93f0b05c9cc8b4a817869fdf45fd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!114 &11494910
 MonoBehaviour:
   m_ObjectHideFlags: 1

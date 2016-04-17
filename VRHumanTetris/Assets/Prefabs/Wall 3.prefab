@@ -70,6 +70,8 @@ GameObject:
   - 114: {fileID: 11495610}
   - 114: {fileID: 11401342}
   - 114: {fileID: 11471076}
+  - 65: {fileID: 6580548}
+  - 114: {fileID: 11483626}
   m_Layer: 0
   m_Name: Wall 3
   m_TagString: Enemy
@@ -296,6 +298,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7473681, y: 0.50636196, z: 2.4393137}
   m_Center: {x: 0.638291, y: 0, z: 1.2196568}
+--- !u!65 &6580548
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.94, y: 0.19, z: 2.3}
+  m_Center: {x: 0, y: -0.64, z: 1.33}
 --- !u!114 &11401342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,6 +368,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a757d0c51d34345a8e3bd94c4fc100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11483626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c93f0b05c9cc8b4a817869fdf45fd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggered: 0
 --- !u!114 &11495610
 MonoBehaviour:
   m_ObjectHideFlags: 1
