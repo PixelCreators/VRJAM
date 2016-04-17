@@ -12,15 +12,12 @@ public class SetActiveOnContact : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Background" || other.gameObject.tag == "Boundary")
         {
             return;
         }
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Jestem w ifie");
-            Debug.Log(other.gameObject.name);
             StartCoroutine(WaitTime());
         }
     }

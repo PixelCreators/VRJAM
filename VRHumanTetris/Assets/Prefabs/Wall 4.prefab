@@ -69,6 +69,7 @@ GameObject:
   - 4: {fileID: 490460}
   - 114: {fileID: 11494844}
   - 114: {fileID: 11463650}
+  - 114: {fileID: 11414508}
   m_Layer: 0
   m_Name: Wall 4
   m_TagString: Enemy
@@ -295,6 +296,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.209579, y: 0.50636196, z: 2.4393137}
   m_Center: {x: -0.90718555, y: 0, z: 1.2196568}
+--- !u!114 &11414508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a757d0c51d34345a8e3bd94c4fc100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11431656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682ba9c433e15364fb1bbe9d6c74cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  Speed: 0
 --- !u!114 &11463650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682ba9c433e15364fb1bbe9d6c74cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  Speed: 0
 --- !u!114 &11494844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565cc408382289c4caec5f1f2cdbeaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallindex: 0
+  Wallindex: 0
   Wall: {fileID: 184110}
   WallFull: {fileID: 107232}
   WallLeft: {fileID: 141550}

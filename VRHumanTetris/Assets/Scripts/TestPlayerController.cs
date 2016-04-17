@@ -11,15 +11,6 @@ public class TestPlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    public void Update()
-    {
-        if (Input.GetButton("Jump"))
-        {
-            //rb.AddForce(Vector3.up * JumpSpeed);
-            transform.Translate(Vector3.up * 260 * Time.deltaTime, Space.World);
-        }
-    }
-
     public void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
