@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using GamepadInput;
 
-public class ControlLeftArmX : MonoBehaviour {
+public class ControlLeftArmX : MonoBehaviour
+{
+    private Vector2 leftStick;
+
     public void Update()
     {
-        var leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any);
+        leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any);
+    }
 
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, leftStick.x*100 + 180,
+    public void LateUpdate()
+    {
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, leftStick.x * 100 + 302.6573f,
             transform.rotation.eulerAngles.z);
-
     }
 }

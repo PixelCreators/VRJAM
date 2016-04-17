@@ -5,6 +5,7 @@ using GamepadInput;
 public class ControlRightArm : MonoBehaviour
 {
     private Vector3 startRotation;
+    private Vector2 rightStick;
 
     void Start()
     {
@@ -13,9 +14,13 @@ public class ControlRightArm : MonoBehaviour
 
     void Update()
     {
-        var rightStick = GamePad.GetAxis(GamePad.Axis.RightStick, GamePad.Index.Any);
+        rightStick = GamePad.GetAxis(GamePad.Axis.RightStick, GamePad.Index.Any);
 
-        transform.localEulerAngles = new Vector3(startRotation.x, rightStick.y * 100, startRotation.z);
+        
+    }
 
+    void LateUpdate()
+    {
+        transform.localEulerAngles = new Vector3(startRotation.x, rightStick.y * 100 + startRotation.y, startRotation.z);
     }
 }

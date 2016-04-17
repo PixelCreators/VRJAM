@@ -3,12 +3,16 @@ using System.Collections;
 using GamepadInput;
 
 public class ControlLeftArm : MonoBehaviour
-{ 
-	void Update ()
+{
+    private Vector2 leftStick;
+
+    void Update ()
 	{
-	    var leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any);
-
-	    transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, leftStick.y * 100, transform.localEulerAngles.z);
-
+        leftStick = GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any);
 	}
+   
+    public void LateUpdate()
+    {
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, leftStick.y * 100, transform.localEulerAngles.z);
+    }
 }
