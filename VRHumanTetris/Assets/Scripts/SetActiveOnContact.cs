@@ -5,12 +5,12 @@ using ObjectManager = System.Runtime.Serialization.ObjectManager;
 
 public class SetActiveOnContact : MonoBehaviour
 {
-
     private IEnumerator timerCorutine;
+    private AddWalls addwalls;
 
     void Start()
     {
-        
+        addwalls = GetComponent<AddWalls>();
     }
     void OnCollisionEnter(Collision other)
     {
@@ -28,9 +28,9 @@ public class SetActiveOnContact : MonoBehaviour
     }
     public IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(1f);
-        OwnObjectManager.Instance.FullWall.SetActive(false);
-        OwnObjectManager.Instance.LeftWall.SetActive(true);
-        OwnObjectManager.Instance.RightWall.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        OwnObjectManager.Instance.Walls[addwalls.wallindex][1].SetActive(false);
+        OwnObjectManager.Instance.Walls[addwalls.wallindex][2].SetActive(true);
+        OwnObjectManager.Instance.Walls[addwalls.wallindex][3].SetActive(true);
     }
 }

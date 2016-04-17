@@ -12,7 +12,6 @@ GameObject:
   - 23: {fileID: 2378934}
   - 65: {fileID: 6532364}
   - 114: {fileID: 11406012}
-  - 114: {fileID: 11451216}
   - 54: {fileID: 5477428}
   m_Layer: 0
   m_Name: Wall3 right
@@ -31,7 +30,6 @@ GameObject:
   - 4: {fileID: 461142}
   - 33: {fileID: 3336602}
   - 23: {fileID: 2382160}
-  - 114: {fileID: 11402316}
   - 65: {fileID: 6513300}
   m_Layer: 0
   m_Name: Wall3 full
@@ -52,7 +50,6 @@ GameObject:
   - 23: {fileID: 2357918}
   - 65: {fileID: 6564970}
   - 114: {fileID: 11421388}
-  - 114: {fileID: 11455826}
   - 54: {fileID: 5469474}
   m_Layer: 0
   m_Name: Wall3 left
@@ -72,6 +69,7 @@ GameObject:
   - 54: {fileID: 5412878}
   - 114: {fileID: 11422660}
   - 114: {fileID: 11410432}
+  - 114: {fileID: 11495610}
   m_Layer: 0
   m_Name: Wall 3
   m_TagString: Enemy
@@ -313,17 +311,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7473681, y: 0.50636196, z: 2.4393137}
   m_Center: {x: 0.638291, y: 0, z: 1.2196568}
---- !u!114 &11402316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338e34690e18a7649830a057f2d21910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11406012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,28 +358,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &11451216
+--- !u!114 &11495610
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136400}
+  m_GameObject: {fileID: 199764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe7f2180220b2b459ecc613d3dd03a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 565cc408382289c4caec5f1f2cdbeaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11455826
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddbdd96c87b46f4584d55344251c303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  wallindex: 0
+  Wall: {fileID: 199764}
+  WallFull: {fileID: 154384}
+  WallLeft: {fileID: 174164}
+  WallRight: {fileID: 136400}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
