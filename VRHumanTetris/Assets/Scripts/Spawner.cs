@@ -27,7 +27,6 @@ public class Spawner : MonoBehaviour {
             {
                 if (i == 8)
                 {
-                    Debug.Log("hehe");
                     GameObject hazard = Hazards[5];
 
                     Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
