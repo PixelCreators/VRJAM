@@ -10,7 +10,8 @@ GameObject:
   - 4: {fileID: 401786}
   - 33: {fileID: 3324390}
   - 23: {fileID: 2355258}
-  - 65: {fileID: 6521380}
+  - 114: {fileID: 11479570}
+  - 64: {fileID: 6404104}
   m_Layer: 0
   m_Name: Wall4 full
   m_TagString: Enemy
@@ -66,10 +67,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490460}
-  - 54: {fileID: 5443312}
-  - 114: {fileID: 11454654}
-  - 114: {fileID: 11487914}
   - 114: {fileID: 11494844}
+  - 114: {fileID: 11463650}
   m_Layer: 0
   m_Name: Wall 4
   m_TagString: Enemy
@@ -245,21 +244,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &5443312
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184110}
-  serializedVersion: 2
-  m_Mass: 1000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &5488580
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -275,8 +259,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6521380
-BoxCollider:
+--- !u!64 &6404104
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -285,8 +269,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.02395, y: 0.50636196, z: 2.4393137}
-  m_Center: {x: 0, y: 0, z: 1.2196568}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300028, guid: 9d843318587ddb14e97a2c2f368d0132, type: 3}
 --- !u!65 &6559720
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -323,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
---- !u!114 &11454654
+--- !u!114 &11463650
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -331,10 +315,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 184110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682ba9c433e15364fb1bbe9d6c74cb1d, type: 3}
+  m_Script: {fileID: 11500000, guid: b1b584e6858f37a44af28ec89cee9ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  Speed: 0.2
+--- !u!114 &11479570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874fe4f6467f7294eb120a789c43cf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,17 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
---- !u!114 &11487914
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874fe4f6467f7294eb120a789c43cf30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11494844
 MonoBehaviour:
   m_ObjectHideFlags: 1

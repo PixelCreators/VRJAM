@@ -10,7 +10,7 @@ public class SetActiveOnContact : MonoBehaviour
 
     void Start()
     {
-        addwalls = GetComponent<AddWalls>();
+        addwalls = gameObject.transform.parent.gameObject.GetComponent<AddWalls>();
     }
     void OnCollisionEnter(Collision other)
     {

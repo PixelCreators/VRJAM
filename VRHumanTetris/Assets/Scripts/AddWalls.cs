@@ -12,7 +12,7 @@ public class AddWalls : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-
+        Debug.Log("Start wallindex:" + wallindex);
         wallindex = OwnObjectManager.Instance.AddToList(Wall, WallFull, WallLeft, WallRight);
         OwnObjectManager.Instance.Walls[wallindex][0].SetActive(true);
         OwnObjectManager.Instance.Walls[wallindex][1].SetActive(true);
