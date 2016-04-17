@@ -3,29 +3,29 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject[] hazards;
-    public Vector3 spawnValues;
+    public GameObject[] Hazards;
+    public Vector3 SpawnValues;
 
-    public int hazardCount;
-    public float spawnWait;
-    public float startWait;
-    public float waveWait;
+    public int HazardCount;
+    public float SpawnWait;
+    public float StartWait;
+    public float WaveWait;
 
-    private bool gameOver;
+    private bool _gameOver;
 
-    void Start()
+    public void Start()
     {
         StartCoroutine(SpawnWaves());
     }
 
-    IEnumerator SpawnWaves()
+    public IEnumerator SpawnWaves()
     {
-        yield return new WaitForSeconds(startWait);
+        yield return new WaitForSeconds(StartWait);
         while (true)
         {
-            for (int i = 0; i < hazardCount; i++)
+            for (int i = 0; i < HazardCount; i++)
             {
-                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
+                GameObject hazard = Hazards[Random.Range(0, Hazards.Length)];
 
                 Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 Quaternion spawnRotation = Quaternion.Euler(
@@ -33,11 +33,11 @@ public class Spawner : MonoBehaviour {
                     Quaternion.identity.eulerAngles.y,
                     Quaternion.identity.eulerAngles.z);
                 Instantiate(hazard, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                yield return new WaitForSeconds(SpawnWait);
             }
-            yield return new WaitForSeconds(waveWait);
+            yield return new WaitForSeconds(WaveWait);
 
-            if (gameOver)
+            if (_gameOver)
             {
                 break;
             }
@@ -45,6 +45,6 @@ public class Spawner : MonoBehaviour {
     }
     public void GameOver()
     {
-        gameOver = true;
+        _gameOver = true;
     }
 }

@@ -2307,17 +2307,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc226fc47ef40d4c9740cf7ae969184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazards:
+  Hazards:
   - {fileID: 105444, guid: d3296f2c7cdaf8645bd3a5f2727b2283, type: 2}
   - {fileID: 131590, guid: 00901c742c47a9045b7c8d97ba916dec, type: 2}
   - {fileID: 199764, guid: 69fe9e60d0eb67843995a2fb0466110c, type: 2}
   - {fileID: 184110, guid: 1fc29bf73c7172c4d867f9d9a8ac80bb, type: 2}
   - {fileID: 106038, guid: 3b45c2f8d55520a4a8bc33beff1a9432, type: 2}
-  spawnValues: {x: 0, y: 0, z: 90}
-  hazardCount: 3
-  spawnWait: 8
-  startWait: 1
-  waveWait: 10
+  SpawnValues: {x: 0, y: 0, z: 0}
+  HazardCount: 3
+  SpawnWait: 8
+  StartWait: 1
+  WaveWait: 10
 --- !u!4 &738703428
 Transform:
   m_ObjectHideFlags: 0
@@ -2947,9 +2947,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1025519021}
-  - 33: {fileID: 1025519020}
   - 65: {fileID: 1025519019}
-  - 23: {fileID: 1025519018}
   - 114: {fileID: 1025519017}
   m_Layer: 0
   m_Name: Boundary
@@ -2969,32 +2967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf189db8a7ecda4a84745d2574682db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1025519018
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025519016}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1025519019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3007,13 +2979,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1025519020
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025519016}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1025519021
 Transform:
   m_ObjectHideFlags: 0
@@ -3145,9 +3110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaterLevel: -0.5
-  Height: 1
-  bounceDamp: 0.3
-  buoyancyCentreOffset: {x: 1, y: 0, z: 0}
+  Height: 0.5
+  BounceDamp: 0.3
+  BuoyancyCentreOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1049343849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,8 +4815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaterLevel: -0.5
   Height: 1
-  bounceDamp: 0.3
-  buoyancyCentreOffset: {x: 1, y: 0, z: 0}
+  BounceDamp: 0
+  BuoyancyCentreOffset: {x: 0, y: 0, z: 0}
 --- !u!54 &1808384683
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4915,7 +4880,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.51
+  m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -4934,7 +4899,7 @@ Transform:
   m_GameObject: {fileID: 1808384681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.4, z: 5}
-  m_LocalScale: {x: -2.42, y: -0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: -0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10

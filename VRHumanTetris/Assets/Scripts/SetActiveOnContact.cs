@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Runtime.Serialization;
-using ObjectManager = System.Runtime.Serialization.ObjectManager;
 
 public class SetActiveOnContact : MonoBehaviour
 {
-    private IEnumerator timerCorutine;
-    private AddWalls addwalls;
+    private AddWalls _addwalls;
 
-    void Start()
+    public void Start()
     {
-        addwalls = gameObject.transform.parent.gameObject.GetComponent<AddWalls>();
+        _addwalls = gameObject.transform.parent.gameObject.GetComponent<AddWalls>();
     }
-    void OnCollisionEnter(Collision other)
+
+    public void OnCollisionEnter(Collision other)
     {
         Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Background" || other.gameObject.tag == "Boundary")
@@ -29,8 +27,8 @@ public class SetActiveOnContact : MonoBehaviour
     public IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(0.25f);
-        OwnObjectManager.Instance.Walls[addwalls.wallindex][1].SetActive(false);
-        OwnObjectManager.Instance.Walls[addwalls.wallindex][2].SetActive(true);
-        OwnObjectManager.Instance.Walls[addwalls.wallindex][3].SetActive(true);
+        OwnObjectManager.Instance.Walls[_addwalls.Wallindex][1].SetActive(false);
+        OwnObjectManager.Instance.Walls[_addwalls.Wallindex][2].SetActive(true);
+        OwnObjectManager.Instance.Walls[_addwalls.Wallindex][3].SetActive(true);
     }
 }

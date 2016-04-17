@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Runtime.Serialization;
 using System.Collections.Generic;
-using UnityEngine.Networking.Match;
 
 public class OwnObjectManager : MonoBehaviour
 {
@@ -11,15 +8,15 @@ public class OwnObjectManager : MonoBehaviour
     public static OwnObjectManager Instance;
 
 	// Use this for initialization
-	void Start () { 
+    public void Start () { 
         Walls = new List<List<GameObject>>();
 	}
-	
-	void Update ()
+
+    public void Update ()
 	{
 	}
 
-    void Awake()
+    public void Awake()
     {
         if (Instance == null)
         {
@@ -31,13 +28,13 @@ public class OwnObjectManager : MonoBehaviour
         }
     }
 
-    public int AddToList(GameObject Wall, GameObject WallFull, GameObject WallLeft, GameObject WallRight)
+    public int AddToList(GameObject wall, GameObject wallFull, GameObject wallLeft, GameObject wallRight)
     {
         Walls.Add(new List<GameObject>());
-        Walls[Walls.Count - 1].Add(Wall);
-        Walls[Walls.Count - 1].Add(WallFull);
-        Walls[Walls.Count - 1].Add(WallLeft);
-        Walls[Walls.Count - 1].Add(WallRight);
+        Walls[Walls.Count - 1].Add(wall);
+        Walls[Walls.Count - 1].Add(wallFull);
+        Walls[Walls.Count - 1].Add(wallLeft);
+        Walls[Walls.Count - 1].Add(wallRight);
 
         return Walls.Count - 1;
     }

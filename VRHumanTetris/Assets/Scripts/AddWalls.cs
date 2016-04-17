@@ -1,26 +1,25 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class AddWalls : MonoBehaviour
 {
 
-    public int wallindex;
+    public int Wallindex;
     public GameObject Wall;
     public GameObject WallFull;
     public GameObject WallLeft;
     public GameObject WallRight;
 
 	// Use this for initialization
-	void Start () {
-        Debug.Log("Start wallindex:" + wallindex);
-        wallindex = OwnObjectManager.Instance.AddToList(Wall, WallFull, WallLeft, WallRight);
-        OwnObjectManager.Instance.Walls[wallindex][0].SetActive(true);
-        OwnObjectManager.Instance.Walls[wallindex][1].SetActive(true);
-        OwnObjectManager.Instance.Walls[wallindex][2].SetActive(false);
-        OwnObjectManager.Instance.Walls[wallindex][3].SetActive(false);
+    public void Start () {
+        Debug.Log("Start wallindex:" + Wallindex);
+        Wallindex = OwnObjectManager.Instance.AddToList(Wall, WallFull, WallLeft, WallRight);
+        OwnObjectManager.Instance.Walls[Wallindex][0].SetActive(true);
+        OwnObjectManager.Instance.Walls[Wallindex][1].SetActive(true);
+        OwnObjectManager.Instance.Walls[Wallindex][2].SetActive(false);
+        OwnObjectManager.Instance.Walls[Wallindex][3].SetActive(false);
     }
 	
 	// Update is called once per frame
-	void Update () {
+    public void Update () {
     }
 }
