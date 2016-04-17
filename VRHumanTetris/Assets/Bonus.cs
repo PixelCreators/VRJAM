@@ -11,7 +11,9 @@ public class Bonus : MonoBehaviour
         if (other.tag == "Bonus" && !_triggered)
         {
             _triggered = true;
+            PointsManager.AddBonus();
             gameObject.SetActive(false);
+
         }
     }
 }
