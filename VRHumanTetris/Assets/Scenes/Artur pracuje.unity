@@ -2312,7 +2312,7 @@ MonoBehaviour:
   - {fileID: 131590, guid: 00901c742c47a9045b7c8d97ba916dec, type: 2}
   - {fileID: 199764, guid: 69fe9e60d0eb67843995a2fb0466110c, type: 2}
   - {fileID: 184110, guid: 1fc29bf73c7172c4d867f9d9a8ac80bb, type: 2}
-  - {fileID: 0}
+  - {fileID: 106038, guid: 1e8076befd719b647b8d4ab2a5de81bb, type: 2}
   - {fileID: 132872, guid: e97ffcab9990b744c85bda4577ddf94f, type: 2}
   SpawnValues: {x: 0, y: 0, z: 0}
   HazardCount: 5
