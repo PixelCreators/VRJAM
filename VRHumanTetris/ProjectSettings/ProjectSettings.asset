@@ -349,6 +349,7 @@ PlayerSettings:
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     15: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     16: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    25: 
   metroPackageName: 2013_10 - Sample Assets
   metroPackageVersion: 
   metroCertificatePath: 

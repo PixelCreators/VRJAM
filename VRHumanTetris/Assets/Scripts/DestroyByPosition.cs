@@ -9,9 +9,9 @@ public class DestroyByPosition : MonoBehaviour
 
     public void Update()
     {
-        if ((gameObject.transform.position.x > 10) || (gameObject.transform.position.x < -10) ||
-            (gameObject.transform.position.y > 8) || (gameObject.transform.position.y < -8) ||
-            (gameObject.transform.position.z > 20.5) || (gameObject.transform.position.z < -10.5))
+        if ((gameObject.transform.position.x > 40) || (gameObject.transform.position.x < -30) ||
+            (gameObject.transform.position.y > 20) || (gameObject.transform.position.y < -20) ||
+            (gameObject.transform.position.z > 50.5) || (gameObject.transform.position.z < -20.5))
         {
             Destroy(gameObject);
         }

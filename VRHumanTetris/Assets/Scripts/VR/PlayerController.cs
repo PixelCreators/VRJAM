@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.VR;
 using System.Collections;
+using GamepadInput;
 
 public class PlayerController : MonoBehaviour
 {
-    private VRNode node;
+    public static PlayerController Instance;
 
-    void Start ()
+    void Awake()
     {
-        node = VRNode.Head;
+        Instance = this;
     }
 	
 	void Update ()
-    {
-        if(Input.GetKeyDown(KeyCode.A))
+	{
+	    if (Input.GetKeyDown(KeyCode.A) || GamePad.GetButtonDown(GamePad.Button.A, GamePad.Index.Any)) 
             InputTracking.Recenter();
-        
     }
 }
