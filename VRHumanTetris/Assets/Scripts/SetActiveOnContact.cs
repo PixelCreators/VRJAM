@@ -24,6 +24,7 @@ public class SetActiveOnContact : MonoBehaviour
     public IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(0.25f);
+        //Cyganek ma małego kutaska hehe
         OwnObjectManager.Instance.Walls[_addwalls.Wallindex][1].SetActive(false);
         OwnObjectManager.Instance.Walls[_addwalls.Wallindex][2].SetActive(true);
         OwnObjectManager.Instance.Walls[_addwalls.Wallindex][3].SetActive(true);
