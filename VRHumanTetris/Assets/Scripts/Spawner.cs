@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour {
                 }
                 else
                 {
-                    GameObject hazard = Hazards[Random.Range(0, Hazards.Length+1)];
+                    GameObject hazard = Hazards[Random.Range(1, Hazards.Length)];
 
                     Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     Quaternion spawnRotation = Quaternion.Euler(

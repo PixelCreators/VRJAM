@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3352232}
   - 23: {fileID: 2314858}
   m_Layer: 0
-  m_Name: Wall6 full
+  m_Name: SuperWall full
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ GameObject:
   - 114: {fileID: 11490958}
   - 54: {fileID: 5407000}
   m_Layer: 0
-  m_Name: Wall6 right
+  m_Name: SuperWall right
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   - 114: {fileID: 11434284}
   - 54: {fileID: 5451088}
   m_Layer: 0
-  m_Name: Wall6 left
+  m_Name: SuperWall left
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
