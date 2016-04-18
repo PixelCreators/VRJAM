@@ -39,13 +39,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc226fc47ef40d4c9740cf7ae969184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ec9bd9e5c19689d4598932f63044f903, type: 3}
+  music: {fileID: 0}
   Hazards:
   - {fileID: 132872, guid: e97ffcab9990b744c85bda4577ddf94f, type: 2}
   - {fileID: 105444, guid: d3296f2c7cdaf8645bd3a5f2727b2283, type: 2}
   - {fileID: 131590, guid: 00901c742c47a9045b7c8d97ba916dec, type: 2}
   - {fileID: 199764, guid: 69fe9e60d0eb67843995a2fb0466110c, type: 2}
   - {fileID: 184110, guid: 1fc29bf73c7172c4d867f9d9a8ac80bb, type: 2}
-  - {fileID: 106038, guid: 1e8076befd719b647b8d4ab2a5de81bb, type: 2}
+  - {fileID: 184110, guid: 1fc29bf73c7172c4d867f9d9a8ac80bb, type: 2}
   - {fileID: 136060, guid: 7461512eb68f2d8429c663ec5b825dec, type: 2}
   - {fileID: 184506, guid: b5c67f809e89f6f40b32021c7b121a99, type: 2}
   - {fileID: 114364, guid: 2c4798906c8fa5747bb35a946030d71a, type: 2}
@@ -53,9 +55,9 @@ MonoBehaviour:
   - {fileID: 130588, guid: 0c07dbe7ff06ea34c831a02192ef5025, type: 2}
   SpawnValues: {x: 0, y: 0, z: 0}
   HazardCount: 1
-  SpawnWait: 0
-  StartWait: 2
-  WaveWait: 8
+  SpawnWait: 7
+  StartWait: 4
+  WaveWait: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

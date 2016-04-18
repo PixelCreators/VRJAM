@@ -4,7 +4,7 @@ using System.Collections;
 public class PointsManager : MonoBehaviour
 {
 
-    private static int Points;
+    public static int Points;
 
     public void Start()
     {

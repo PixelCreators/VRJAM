@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using GamepadInput;
 
-public class Spawner : MonoBehaviour {
+public class Spawner : MonoBehaviour
+{
+
+    public AudioClip audioClip;
+    public AudioSource music;
 
     public GameObject[] Hazards;
     public Vector3 SpawnValues;
@@ -12,15 +17,17 @@ public class Spawner : MonoBehaviour {
     public float WaveWait;
 
     private bool _gameOver;
+    private bool _start;
 
     public void Start()
     {
-        StartCoroutine(SpawnWaves());
     }
 
     public IEnumerator SpawnWaves()
     {
+        AudioSource.PlayClipAtPoint(audioClip, Vector3.zero);
         yield return new WaitForSeconds(StartWait);
+        music.Play();
         while (true)
         {
             for (int i = 0; i < HazardCount; i++)
@@ -59,6 +66,17 @@ public class Spawner : MonoBehaviour {
             }
         }
     }
+
+    public void Update()
+    {
+        if(_start)
+            return;
+
+        if (GamePad.GetButtonDown(GamePad.Button.A, GamePad.Index.Any))
+            StartCoroutine(SpawnWaves());
+
+    }
+
     public void GameOver()
     {
         _gameOver = true;

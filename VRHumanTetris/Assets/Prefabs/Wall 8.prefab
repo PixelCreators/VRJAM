@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c93f0b05c9cc8b4a817869fdf45fd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 7df6166915e34a34bbca62aa73f746bb, type: 3}
   triggered: 0
 --- !u!114 &11486202
 MonoBehaviour:
