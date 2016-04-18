@@ -25,9 +25,10 @@ public class Spawner : MonoBehaviour {
         {
             for (int i = 0; i < HazardCount; i++)
             {
+                Debug.Log(i);
                 if (i == 8)
                 {
-                    GameObject hazard = Hazards[5];
+                    GameObject hazard = Hazards[0];
 
                     Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     Quaternion spawnRotation = Quaternion.Euler(
@@ -39,7 +40,7 @@ public class Spawner : MonoBehaviour {
                 }
                 else
                 {
-                    GameObject hazard = Hazards[Random.Range(0, Hazards.Length-1)];
+                    GameObject hazard = Hazards[Random.Range(0, Hazards.Length+1)];
 
                     Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     Quaternion spawnRotation = Quaternion.Euler(
