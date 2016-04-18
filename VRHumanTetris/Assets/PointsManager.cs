@@ -6,6 +6,10 @@ public class PointsManager : MonoBehaviour
 
     private static int Points;
 
+    public void Start()
+    {
+        Points = 0;
+    }
 
     public static void AddPoints()
     {

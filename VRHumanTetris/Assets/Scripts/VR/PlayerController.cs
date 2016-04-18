@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
 
+    public bool trigger;
+
     void Awake()
     {
         Instance = this;
@@ -14,7 +16,13 @@ public class PlayerController : MonoBehaviour
 	
 	void Update ()
 	{
-	    if (Input.GetKeyDown(KeyCode.A) || GamePad.GetButtonDown(GamePad.Button.A, GamePad.Index.Any)) 
-            InputTracking.Recenter();
+        if(trigger)
+            return;
+
+	    if (Input.GetKeyDown(KeyCode.A) || GamePad.GetButtonDown(GamePad.Button.A, GamePad.Index.Any))
+	    {
+	        InputTracking.Recenter();
+	        trigger = true;
+	    }
     }
 }
