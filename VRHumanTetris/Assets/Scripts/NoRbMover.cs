@@ -12,6 +12,9 @@ public class NoRbMover : MonoBehaviour
 
     public void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Speed * Time.deltaTime);
+        transform.position = new Vector3(
+			transform.position.x,
+			transform.position.y,
+			transform.position.z - Speed * Time.deltaTime);
     }
 }
